@@ -14,7 +14,7 @@ router.get("/students", studentController.getStudents);
 
 // /admin/add-product => POST
 //router.post('/add-student', adminController);
-//router.get('/edit-student/:studentId', adminController);
+router.get('/students/:studentId', studentController.getStudent);
 
 //router.post('/edit-student', adminController);
 

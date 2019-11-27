@@ -18,3 +18,16 @@ exports.getStudents = (req, res) => {
     })
     .catch(err => console.log(err));
 };
+
+exports.getStudent = (req, res, next) => {
+  const studentId = req.params.studentId;
+  Student.findAll({
+    where: {
+       id: studentId
+    }})
+    .then(students => {
+      res.json(students[0]);
+      console.log(students[0]);
+    })
+    .catch(err => console.log(err));
+};
