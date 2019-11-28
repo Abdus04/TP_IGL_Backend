@@ -13,8 +13,9 @@ exports.getStudent = (req, res, next) => {
   const studentId = req.params.studentId;
   Student.findAll({
     where: {
-       id: studentId
-    }})
+      id: studentId
+    }
+  })
     .then(students => {
       res.json(students[0]);
       console.log(students[0]);
@@ -22,15 +23,15 @@ exports.getStudent = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
-exports.getAddStudent= (req, res, next) => {
-    Student.create({
-    nom: nom,
-    prenom: prenom,
-    matricule: matricule,
-    year: year,
-    section: section,
-    group: group
+exports.postAddStudent = (req, res, next) => {
+  Student.create({
+    nom: req.body.nom,
+    prenom: req.body.prenom,
+    matricule: req.body.matricule,
+    year: req.body.year,
+    section: req.body.section,
+    group: req.body.group
   })
-  .then()
-  .catch(err=>console.log(err));
-}
+    .then()
+    .catch(err => console.log(err));
+};
