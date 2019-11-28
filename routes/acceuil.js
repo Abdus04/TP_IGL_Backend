@@ -7,7 +7,7 @@ const app = express();
 
 
 // /admin/add-product => GET
-//router.get('/add-student', studentController);
+router.get('/add-student', studentController.postAddStudent);
 
 // /admin/students => GET
 router.get("/students", studentController.getStudents);

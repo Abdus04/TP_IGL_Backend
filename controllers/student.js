@@ -1,16 +1,6 @@
 const Student = require("../models/student");
 
 exports.getStudents = (req, res) => {
-  // Student.create({
-  //   nom: 'rezgui',
-  //   prenom: 'abdelkader',
-  //   matricule: 151515,
-  //   year: '1cs',
-  //   section: 'A',
-  //   group: '2'
-  // })
-  // .then()
-  // .catch(err=>console.log(err));
   Student.findAll()
     .then(students => {
       console.log(students);
@@ -31,3 +21,16 @@ exports.getStudent = (req, res, next) => {
     })
     .catch(err => console.log(err));
 };
+
+exports.getAddStudent= (req, res, next) => {
+    Student.create({
+    nom: nom,
+    prenom: prenom,
+    matricule: matricule,
+    year: year,
+    section: section,
+    group: group
+  })
+  .then()
+  .catch(err=>console.log(err));
+}
