@@ -22,6 +22,47 @@ exports.getStudent = (req, res, next) => {
     })
     .catch(err => console.log(err));
 };
+exports.getStudentsYear = (req, res, next) => {
+  const studentYear = req.params.studentYear;
+  Student.findAll({
+    where: {
+      year: studentYear
+    }
+  })
+    .then(students => {
+      res.json(students);
+      console.log(students);
+    })
+    .catch(err => console.log(err));
+};
+
+exports.getStudentsSection = (req, res, next) => {
+  const studentSection = req.params.studentSection;
+  Student.findAll({
+    where: {
+      section: studentSection
+    }
+  })
+    .then(students => {
+      res.json(students);
+      console.log(students);
+    })
+    .catch(err => console.log(err));
+};
+
+exports.getStudentsGroup = (req, res, next) => {
+  const studentGroup = req.params.studentGroup;
+  Student.findAll({
+    where: {
+      group: studentGroup
+    }
+  })
+    .then(students => {
+      res.json(students);
+      console.log(students);
+    })
+    .catch(err => console.log(err));
+};
 
 exports.postAddStudent = (req, res, next) => {
   Student.create({
@@ -34,4 +75,12 @@ exports.postAddStudent = (req, res, next) => {
   })
     .then()
     .catch(err => console.log(err));
+};
+exports.postDeleteStudent = (req, res, next) => {
+  const studentId = req.body.studentId;
+  Student.findAll({where: {id: studentId}})
+  .then(students => {
+    return students[0].destroy();
+  })
+  .catch(err=> console.log(err));
 };

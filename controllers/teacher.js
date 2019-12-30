@@ -31,3 +31,11 @@ exports.postAddTeacher = (req, res, next) => {
     .then()
     .catch(err => console.log(err));
 };
+exports.postDeleteTeacher = (req, res, next) => {
+  const teacherId = req.body.teacherId;
+  Teacher.findAll({where: {id: teacherId}})
+  .then(teachers => {
+    return teachers[0].destroy();
+  })
+  .catch(err=> console.log(err));
+};
