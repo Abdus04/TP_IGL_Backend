@@ -15,7 +15,7 @@ exports.getTeacher = (req, res, next) => {
       id: teacherId
     }
   })
-    .then(teachers => {
+    .then((teachers) => {
       res.json(teachers[0]);
     })
     .catch(err => console.log(err));
@@ -33,18 +33,9 @@ exports.postAddTeacher = (req, res, next) => {
 };
 exports.postDeleteTeacher = (req, res, next) => {
   const teacherId = req.body.teacherId;
-  Teacher.findAll({ where: { id: teacherId } })
-    .then(teachers => {
-      return teachers[0].destroy();
-    })
-    .catch(err => console.log(err));
+  Teacher.findAll({where: {id: teacherId}})
+  .then(teachers => {
+    return teachers[0].destroy();
+  })
+  .catch(err=> console.log(err));
 };
-
-// exports.postDeleteTeacher = (req, res, next) => {
-//   const teacherId = req.body.teacherId;
-//   Teacher.findAll({where: {id: teacherId}})
-//   .then(teachers => {
-//     return teachers[0].destroy();
-//   })
-//   .catch(err=> console.log(err));
-// };
