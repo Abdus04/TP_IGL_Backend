@@ -78,9 +78,10 @@ exports.postAddStudent = (req, res, next) => {
 };
 exports.postDeleteStudent = (req, res, next) => {
   const studentId = req.body.studentId;
-  Student.findAll({where: {id: studentId}})
-  .then(students => {
-    return students[0].destroy();
-  })
-  .catch(err=> console.log(err));
+  console.log(studentId);
+  Student.findAll({ where: { id: studentId } })
+    .then(students => {
+      return students[0].destroy();
+    })
+    .catch(err => console.log(err));
 };
