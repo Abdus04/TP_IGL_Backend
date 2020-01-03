@@ -22,7 +22,8 @@ exports.getTeachers = (req, res) => {
  * @method
  * @param {Object} req - //description te3 l variable
  * @param {Object} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
+   * @param {Object} next - //description te3 l variable
+
  * @param {Number} teacherId - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
@@ -45,7 +46,7 @@ exports.getTeacher = (req, res, next) => {
  * @method
  * @param {Object} req - //description te3 l variable
  * @param {Object} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
+ * @param {Object} students - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 exports.postAddTeacher = (req, res, next) => {
@@ -64,8 +65,7 @@ exports.postAddTeacher = (req, res, next) => {
  * @method
  * @param {Object} req - //description te3 l variable
  * @param {Object} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
- * @param {Number} teacherId - //description te3 l variable
+ * @param {Object} students - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 exports.postDeleteTeacher = (req, res, next) => {

@@ -1,19 +1,11 @@
+const Student = require("../models/student");
 /**
  * @file student.js
- * @author Tp Igl
+ * @author TpIgl
  * @version 1.0.0
  * @since 1.0.0
  * @copyright &copy; . All rights reserved.
  */
-
-/** @constant
- * a small description
-    @type {Object}
-    @default
-*/
-
-const Student = require("../models/student");
-
 /**
  * a small description.
  * @method

@@ -7,7 +7,6 @@
  */
 
 /** @constant
- * a small description
     @type {Object}
     @default
 */

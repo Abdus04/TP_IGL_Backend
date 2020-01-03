@@ -1,25 +1,10 @@
-/**
- * @file student.js
- * @author Tp Igl
- * @version 1.0.0
- * @since 1.0.0
- * @copyright &copy; . All rights reserved.
- */
-
-/** @constant
- * a small description
-    @type {Object}
-    @default
-*/
-
 const Student = require("../models/student");
 
 /**
  * a small description.
  * @method
- * @param {Object} req - //description te3 l variable
- * @param {Object} res - //description te3 l variable
- * @param {Object} students - //description te3 l variable
+ * @param {String} req - //description te3 l variable
+ * @param {String} res - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 
@@ -35,10 +20,9 @@ exports.getStudents = (req, res) => {
 /**
  * a small description.
  * @method
- * @param {Object} req - //description te3 l variable
- * @param {Object} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
- * @param {Number} studentId - //description te3 l variable
+ * @param {String} req - //description te3 l variable
+ * @param {String} res - //description te3 l variable
+ *  @param {String} res - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 
@@ -59,10 +43,8 @@ exports.getStudent = (req, res, next) => {
 /**
  * a small description.
  * @method
- * @param {Object} req - //description te3 l variable
- * @param {Object} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
- * @param {String} studentYear - //description te3 l variable
+ * @param {String} req - //description te3 l variable
+ * @param {String} res - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 
@@ -85,8 +67,6 @@ exports.getStudentsYear = (req, res, next) => {
  * @method
  * @param {String} req - //description te3 l variable
  * @param {String} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
- * @param {String} studentSection - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 
@@ -109,8 +89,6 @@ exports.getStudentsSection = (req, res, next) => {
  * @method
  * @param {String} req - //description te3 l variable
  * @param {String} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
- * @param {String} studentGroup - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 
@@ -133,7 +111,6 @@ exports.getStudentsGroup = (req, res, next) => {
  * @method
  * @param {String} req - //description te3 l variable
  * @param {String} res - //description te3 l variable
- * @param {Object} next - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 
@@ -155,7 +132,6 @@ exports.postAddStudent = (req, res, next) => {
  * @method
  * @param {String} req - //description te3 l variable
  * @param {String} res - //description te3 l variable
- * @param {Number} studentId - //description te3 l variable
  * @throws {NotFoundError} When the users are not found.
  */
 
